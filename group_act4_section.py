@@ -166,7 +166,8 @@ def updateContact(searched_picked):
             # pag hindi equal meaning icoconcatenate lang natin yung lumang value kasi hindi iyon yung hinahanap
             updated_value += "#"+label + "^" + content
 
-    updated_value += "\n"  # lagyan lang ng new line si updated_value
+    if "\n" not in updated_value: #pag wala pang "\n" sa dulo bali lalagyan pag meron na hindi na
+        updated_value += "\n"  
     # print(updated_value)
 
     # updating text file
